@@ -9,7 +9,7 @@
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest --verbose"
+    "test": "jest --verbose --watch"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +34,11 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "express": "^4.17.2"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.1",
+    "http-status": "^1.5.2",
+    "nock": "^13.2.4"
   }
 }

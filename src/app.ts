@@ -1,20 +1,24 @@
+import * as dotenv from "dotenv";
 import express from "express";
-import path from "path";
 
-import { loadApiEndpoints } from "./controllers/api";
+import setRoutes from "./routes";
 
-// Create Express server
+console.log({ path: __dirname + "/.env" });
+dotenv.config({ path: __dirname + "/.env" });
+
 const app = express();
 
-// Express configuration
 app.set("port", process.env.PORT || 3000);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(
-  express.static(path.join(__dirname, "../public"), { maxAge: 31557600000 })
-);
-
-loadApiEndpoints(app);
+if (process.env.NODE_ENV !== "production") {
+  console.log(
+    `The actual env is ${process.env.NODE_ENV}, this is not a production ENV`
+  );
+} else {
+  console.log(`The actual env is ${process.env.NODE_ENV}`);
+  console.log("CAREFUL!! This the production ENV");
+}
+setRoutes(app);
 
 export default app;
