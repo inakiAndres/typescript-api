@@ -2,7 +2,7 @@ import ThirdPartyRepository from "../../domain/third-party-repository";
 import { IFiltersOptions } from "../../types/filter-type";
 import { UseCase } from "./use-case";
 
-export default class CountryUseCase implements UseCase {
+export default class Country implements UseCase {
   #externalRepository: ThirdPartyRepository | null = null;
 
   constructor(externalRepository: any) {

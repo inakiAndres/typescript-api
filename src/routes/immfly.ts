@@ -1,7 +1,10 @@
 import { Router } from "express";
 import { query } from "express-validator";
 
-import { countryGetController } from "../dependency-injection/controllers";
+import {
+  countryGetController,
+  reverseController,
+} from "../dependency-injection/controllers";
 import { checkCountries } from "../middlewares/validators/countries-validator";
 
 const router = Router();
@@ -20,5 +23,7 @@ router.get(
   checkCountries,
   countryGetController.run
 );
+
+router.get("/reverse/:word", reverseController.run);
 
 export default router;

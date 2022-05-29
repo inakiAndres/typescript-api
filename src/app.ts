@@ -3,7 +3,6 @@ import express from "express";
 
 import setRoutes from "./routes";
 
-console.log({ path: __dirname + "/.env" });
 dotenv.config({ path: __dirname + "/.env" });
 
 const app = express();

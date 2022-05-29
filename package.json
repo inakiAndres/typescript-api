@@ -9,7 +9,9 @@
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest --verbose --watch"
+    "test": "jest --verbose",
+    "test:watch": "jest --verbose --watch",
+    "test:coverage": "jest --collectCoverage --runInBand --forceExit"
   },
   "author": "",
   "license": "ISC",
