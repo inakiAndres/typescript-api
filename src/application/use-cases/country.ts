@@ -5,7 +5,7 @@ import { UseCase } from "./use-case";
 export default class Country implements UseCase {
   #externalRepository: ThirdPartyRepository | null = null;
 
-  constructor(externalRepository: any) {
+  constructor(externalRepository: ThirdPartyRepository) {
     this.#externalRepository = externalRepository;
 
     this.run = this.run.bind(this);

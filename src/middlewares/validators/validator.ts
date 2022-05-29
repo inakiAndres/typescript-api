@@ -1,7 +1,7 @@
 import express from "express";
 import { Result, ValidationError, validationResult } from "express-validator";
 
-export function checkCountries(
+export function validation(
   req: express.Request,
   res: express.Response,
   next: express.NextFunction

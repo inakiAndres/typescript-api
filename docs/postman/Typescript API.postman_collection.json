@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "c628a511-28a4-477e-bfff-46de719cb2eb",
+		"name": "Typescript API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Country",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{app_url}}/api/immfly/countries?filter=and&order=asc",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"api",
+						"immfly",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "and"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse word",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{app_url}}/api/immfly/reverse/aeiouBCDFGJKLMNPQSTVXZ",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"api",
+						"immfly",
+						"reverse",
+						"aeiouBCDFGJKLMNPQSTVXZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Append",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{app_url}}/api/immfly/append?start=this_is_a&end=:)",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"api",
+						"immfly",
+						"append"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "this_is_a"
+						},
+						{
+							"key": "end",
+							"value": ":)"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

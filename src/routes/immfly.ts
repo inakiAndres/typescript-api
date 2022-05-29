@@ -2,10 +2,11 @@ import { Router } from "express";
 import { query } from "express-validator";
 
 import {
+  appendController,
   countryGetController,
   reverseController,
 } from "../dependency-injection/controllers";
-import { checkCountries } from "../middlewares/validators/countries-validator";
+import { validation } from "../middlewares/validators/validator";
 
 const router = Router();
 
@@ -20,10 +21,18 @@ router.get(
     .isString()
     .isIn(["asc", "desc"])
     .withMessage("Invalid order only can be asc or desc"),
-  checkCountries,
+  validation,
   countryGetController.run
 );
 
 router.get("/reverse/:word", reverseController.run);
+
+router.get(
+  "/append",
+  query("start").notEmpty().isString().withMessage("Start param is required"),
+  query("end").notEmpty().isString().withMessage("End param is required"),
+  validation,
+  appendController.run
+);
 
 export default router;
