@@ -10,4 +10,5 @@ module.exports = {
   },
   testMatch: ["**/test/**/*.spec.(ts|js)"],
   testEnvironment: "node",
+  setupFiles: ["./test/config/setup.ts"],
 };
