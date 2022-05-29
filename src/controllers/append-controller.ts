@@ -3,9 +3,8 @@ import httpStatus from "http-status";
 
 import { UseCase } from "../application/use-cases/use-case";
 import { IAppendOptions } from "../types/append-type";
-import { Controller } from "./Controller";
 
-export default class AppendController implements Controller {
+export default class AppendController {
   appendCommand: UseCase;
   constructor(appendCommand: UseCase) {
     this.appendCommand = appendCommand;

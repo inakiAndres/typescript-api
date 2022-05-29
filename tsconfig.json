@@ -1,4 +1,7 @@
   {
+    "ts-node": {
+      "files": true
+    },
     "compilerOptions": {
       "module": "commonjs",
       "esModuleInterop": true,
@@ -7,6 +10,7 @@
       "strict": true,
       "moduleResolution": "node",
       "sourceMap": true,
+      "rootDir": "./src",
       "outDir": "dist",
       "resolveJsonModule": true
     },
@@ -14,3 +18,4 @@
       "src/**/*"
     ]
   }
+  
