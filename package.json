@@ -42,5 +42,22 @@
     "express-validator": "^6.14.1",
     "http-status": "^1.5.2",
     "nock": "^13.2.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./test/config/setup.js"
+    ],
+    "coverageDirectory": "./test/coverage/",
+    "coveragePathIgnorePatterns": [
+      "/test/"
+    ],
+    "verbose": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "cobertura"
+    ]
   }
 }
