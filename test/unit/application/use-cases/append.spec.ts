@@ -3,7 +3,7 @@ import { appendService } from "../../../../src/dependency-injection/domain";
 import { IAppendOptions } from "../../../../src/types/append-type";
 import { RESPONSE_APPEND } from "../../../mocks/append-endpoint-responses";
 
-const filter: IAppendOptions = {
+const options: IAppendOptions = {
   start: "hello",
   end: "bye",
 };
@@ -15,7 +15,7 @@ describe("USE CASE - Append", () => {
   });
   describe("HAPPY PATHs", () => {
     it("should return an array with the appended array", async () => {
-      const response = await appendCommand.run(filter);
+      const response = await appendCommand.run(options);
       expect(response).toEqual(RESPONSE_APPEND);
     });
   });
