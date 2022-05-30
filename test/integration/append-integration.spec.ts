@@ -1,11 +1,11 @@
 import request from "supertest";
 
-import app from "../src/app";
+import app from "../../src/app";
 import {
   ERROR_END,
   ERROR_START,
   RESPONSE_APPEND,
-} from "./config/append-endpoint-responses";
+} from "../mocks/append-endpoint-responses";
 
 describe("GET /api/immfly/append?start=hello&end=bye", () => {
   describe("HAPPY PATHs", () => {

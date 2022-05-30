@@ -1,7 +1,7 @@
 import nock from "nock";
 import request from "supertest";
 
-import app from "../src/app";
+import app from "../../src/app";
 import {
   ERROR_ORDER,
   RESPONSE_FILTER,
@@ -9,7 +9,7 @@ import {
   RESPONSE_FILTER_ORDER_DESC,
   RESPONSE_THIRD_PARTY,
   RESPONSE_WITHOUT_FILTERS,
-} from "./config/third-party-endpoint-responses";
+} from "../mocks/third-party-endpoint-responses";
 
 beforeEach(() => {
   nock("https://api.jsonbin.io")

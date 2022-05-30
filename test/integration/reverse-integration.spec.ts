@@ -1,7 +1,7 @@
 import request from "supertest";
 
-import app from "../src/app";
-import { RESPONSE_REVERSED, WORD } from "./config/reverse-endpoint-responses";
+import app from "../../src/app";
+import { RESPONSE_REVERSED, WORD } from "../mocks/reverse-endpoint-responses";
 
 describe("GET /api/immfly/reverse/:word", () => {
   describe("HAPPY PATHs", () => {
