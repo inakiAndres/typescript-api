@@ -1,5 +1,5 @@
-import { Country } from "./country-type";
+import { CountryType } from "./country-type";
 
 export interface ServerResponse {
-  data: Country[];
+  data: CountryType[];
 }

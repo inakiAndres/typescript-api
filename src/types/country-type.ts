@@ -1,4 +1,4 @@
-export interface Country {
+export interface CountryType {
   country: string;
   code: string;
   vat: number;
