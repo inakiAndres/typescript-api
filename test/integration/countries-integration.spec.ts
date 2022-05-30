@@ -9,7 +9,7 @@ import {
   RESPONSE_FILTER_ORDER_DESC,
   RESPONSE_THIRD_PARTY,
   RESPONSE_WITHOUT_FILTERS,
-} from "../mocks/third-party-endpoint-responses";
+} from "../mocks/country-endpoint-responses";
 
 beforeEach(() => {
   nock("https://api.jsonbin.io")
