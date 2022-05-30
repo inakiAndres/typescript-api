@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Country } from "../types/country-type";
 import { IFiltersOptions } from "../types/filter-type";
 
