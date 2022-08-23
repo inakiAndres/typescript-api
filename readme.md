@@ -1,17 +1,19 @@
-# TypeScript Express API Bootstrap (base / project starter)
+# TypeScript API
 
 This is a repository intended to serve as a starting point if you want to bootstrap a express API project in TypeScript.
 
-## Features
+## Endpoints
 
-- [TypeScript](https://www.typescriptlang.org/) (v4)
-- [ts-node-dev](https://github.com/wclr/ts-node-dev)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/) with:
-  - [Simple Import Sort](https://github.com/lydell/eslint-plugin-simple-import-sort/)
-  - [Import plugin](https://github.com/benmosher/eslint-plugin-import/)
-- [Jest](https://jestjs.io) with [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
-- [GitHub Action workflows](https://github.com/features/actions) set up to run tests and linting on push
+- First endpoint
+  ○ Request: /countries?filter=and&order=asc
+  ○ Response: All the countries that have ‘and’ in the country or code. And in ascending order by vat
+- Second endpoint
+  ○ Request: /reverse/hello
+  ○ Response: OllEh
+- Third endpoint
+  ○ Request: /append?start=hello&end=bye
+  ○ Response: [hello, SIMPLE_ARRAY, bye]
+
 
 ## Running the app
 
@@ -28,6 +30,7 @@ npm run build
 # run generated content in dist folder on port 3000
 npm run start
 ```
+# Download the postman collection and play with it :)
 
 ## Testing
 
